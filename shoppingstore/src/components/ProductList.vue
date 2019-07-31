@@ -7,15 +7,19 @@
       </h4>
       <div class="card-text bg-white p-1">{{ p.description }}</div>
     </div>
+    <br>
+    <Pagination />
   </div>
 </template>
 
 <script>
-    import { mapState } from "vuex";
+    import { mapGetters } from "vuex";
+    import Pagination from './Pagination';
 
     export default {
+        components: { Pagination },
         computed: {
-            ...mapState(["products"])
+            ...mapGetters({ products: "processedProducts" })
         }
     };
 </script>
