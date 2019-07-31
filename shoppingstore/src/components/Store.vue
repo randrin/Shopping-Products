@@ -6,10 +6,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-3 bg-info p-2">
+      <div class="col-3 bg-info">
         <Categories />
       </div>
-      <div class="col-9 bg-success p-2">
+      <div class="col-9 bg-success">
         <ProductList />
       </div>
     </div>
