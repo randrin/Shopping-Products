@@ -7,6 +7,7 @@ Vue.config.productionTip = false
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
+// Filter Section
 Vue.filter('currency', function (value) {
   return new Intl.NumberFormat("en-US",
     { style: "currency", currency: "USD" }).format(value);
