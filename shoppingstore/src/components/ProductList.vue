@@ -5,21 +5,32 @@
         {{p.name}}
         <span class="badge badge-pill badge-primary float-right">{{ p.price | currency}}</span>
       </h4>
-      <div class="card-text bg-white p-1">{{ p.description }}</div>
+      <div class="card-text bg-white p-1">
+        {{ p.description }}
+        <button class="btn btn-success btn-sm float-right"
+          v-on:click="handleProductAdd(p)"><i class="fa fa-cart-arrow-down"></i> Add To Cart</button>
+      </div>
     </div>
-    <br>
+    <br />
     <Pagination />
   </div>
 </template>
 
 <script>
-    import { mapGetters } from "vuex";
-    import Pagination from './Pagination';
+  import { mapGetters, mapMutations } from "vuex";
+  import Pagination from "./Pagination";
 
-    export default {
-        components: { Pagination },
-        computed: {
-            ...mapGetters({ products: "processedProducts" })
-        }
-    };
+  export default {
+    components: { Pagination },
+    computed: {
+      ...mapGetters({ products: "processedProducts" })
+    },
+    methods: {
+      ...mapMutations({ addProduct: "cart/addProduct" }),
+      handleProductAdd(product) {
+        this.addProduct(product);
+        this.$router.push("/cart");
+      }
+    }
+  };
 </script>
