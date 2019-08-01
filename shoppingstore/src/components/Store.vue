@@ -2,7 +2,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col bg-dark text-white">
-        <a class="navbar-brand">SHOPPING STORE</a>
+        <a class="navbar-brand mb-3 mt-3">SHOPPING STORE</a>
+        <CartSummary />
       </div>
     </div>
     <div class="row">
@@ -19,8 +20,9 @@
 <script>
     import ProductList from './ProductList';
     import Categories from './Categories';
+    import CartSummary from './CartSummary';
 
     export default {
-        components: { ProductList, Categories }
+        components: { ProductList, Categories, CartSummary }
     }
 </script>

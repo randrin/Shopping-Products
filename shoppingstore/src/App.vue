@@ -1,19 +1,23 @@
 <template>
-  <Store />
+  <router-view />
 </template>
 
 <script>
-  import Store from './components/Store.vue';
+  // import Store from './components/Store.vue';
   import { mapActions } from 'vuex';
 
   export default {
     name: 'app',
-    components: { Store },
+    // components: { Store },
     methods: {
-      ...mapActions(["getData"])
+      ...mapActions({
+        getData: "getData",
+        inizializeCart: "cart/inizializeCart"
+      })
     },
     created() {
       this.getData();
+      this.inizializeCart(this.$store);
     }
   }
 </script>
