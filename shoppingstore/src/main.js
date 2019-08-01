@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import store from './store';
 import router from './routes';
+import Vuelidate from "vuelidate";
 
 Vue.config.productionTip = false
 
@@ -13,6 +14,9 @@ Vue.filter('currency', function (value) {
   return new Intl.NumberFormat("en-US",
     { style: "currency", currency: "USD" }).format(value);
 });
+
+// Vue Validations Form
+Vue.use(Vuelidate);
 
 new Vue({
   render: h => h(App),
