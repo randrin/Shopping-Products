@@ -13,6 +13,7 @@
         <table class="table table-bordered table-striped p-2">
           <thead>
             <tr>
+              <th>Image</th>
               <th>Quantity</th>
               <th>Product</th>
               <th class="text-right">Price</th>

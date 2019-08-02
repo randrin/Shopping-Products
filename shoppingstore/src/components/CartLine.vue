@@ -1,5 +1,6 @@
 <template>
   <tr>
+    <td><img :src="line.product.url" class="product-img"/></td>
     <td>
       <input
         type="number"
@@ -43,3 +44,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .product-img {
+    width: 50px;
+    height: 50px; 
+    border-radius: 20%;
+  }
+</style>
