@@ -9,7 +9,7 @@
     </div>
     <div class="row">
       <div class="col mt-2">
-        <h2 class="text-center">My Cart</h2>
+        <h2 class="text-center mt-5 mb-5">My Cart</h2>
         <table class="table table-bordered table-striped p-2">
           <thead>
             <tr>
@@ -34,8 +34,8 @@
           </tbody>
           <tfoot v-if="lines.length > 0">
             <tr>
-              <td colspan="3" class="text-right">Total:</td>
-              <td class="text-right">{{ totalPrice | currency }}</td>
+              <td colspan="3" class="text-right"><b>Total:</b></td>
+              <td class="text-right"><b class="text-danger">{{ totalPrice | currency }}</b></td>
             </tr>
           </tfoot>
         </table>
@@ -43,12 +43,12 @@
     </div>
     <div class="row">
       <div class="col">
-        <div class="text-center">
+        <div class="text-center mt-5">
           <router-link to="/" class="btn btn-secondary m-1">
-            <i class="fa fa-shopping-cart"></i> Continue Shopping
+            <i class="fa fa-shopping-cart"></i><b class="text-title-icon">Continue Shopping</b>
           </router-link>
           <router-link to="/checkout" class="btn btn-primary m-1" v-if="lines.length !== 0">
-            <i class="fa fa-credit-card"></i> Checkout
+            <i class="fa fa-credit-card"></i><b class="text-title-icon">Checkout</b>
           </router-link>
         </div>
       </div>

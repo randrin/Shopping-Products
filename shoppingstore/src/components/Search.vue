@@ -1,13 +1,12 @@
 <template>
-  <div  class="row my-2">
-    <label class="col-2 col-form-label text-right">Search:</label>
+  <div v-if="showSearch" class="row my-2">
+    <label class="col-2 col-form-label text-right"><b>Search:</b></label>
     <input
       class="col form-control"
       v-bind:value="searchTerm"
       v-on:input="doSearch"
-      placeholder="Enter search product..."
-    />
-    <button class="col-1 btn btn-sm btn-secondary mx-4" v-on:click="handleClose">Close</button>
+      placeholder="Enter search product..."/>
+    <button class="col-1 btn btn-sm btn-secondary mx-3" v-on:click="handleClose"><i class="fa fa-close"></i><b class="text-title-icon">Clear</b></button>
   </div>
 </template>
 
@@ -15,6 +14,11 @@
     import { mapState, mapActions, mapMutations } from "vuex";
 
     export default {
+        data: function() {
+          return {
+              showSearch: true
+          }  
+        },
         computed: {
             ...mapState(["searchTerm", "showSearch"])
         },
