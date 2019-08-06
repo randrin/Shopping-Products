@@ -12,12 +12,12 @@
     methods: {
       ...mapActions({
         getData: "getData",
-        inizializeCart: "cart/inizializeCart"
+        initializeCart: "cart/initializeCart"
       })
     },
     created() {
       this.getData();
-      this.inizializeCart(this.$store);
+      this.initializeCart(this.$store);
     }
   }
 </script>
