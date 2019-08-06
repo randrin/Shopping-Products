@@ -1,5 +1,6 @@
 <template>
   <tr>
+    <td><img :src="line.product.url" class="product-img"/></td>
     <td>
       <input
         type="number"
@@ -13,7 +14,7 @@
     <td class="text-right">{{ line.product.price | currency }}</td>
     <td class="text-right">{{ (line.quantity * line.product.price) | currency }}</td>
     <td class="text-center">
-      <button class="btn btn-sm btn-danger" v-on:click="sendRemoveEvent"><i class="fa fa-remove"></i> Remove</button>
+      <button class="btn btn-sm btn-danger" v-on:click="sendRemoveEvent"><i class="fa fa-remove"></i><b class="text-title-icon">Remove</b></button>
     </td>
   </tr>
 </template>
@@ -43,3 +44,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .product-img {
+    width: 50px;
+    height: 50px; 
+    border-radius: 20%;
+  }
+</style>

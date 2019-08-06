@@ -79,8 +79,8 @@
         </div>
     </div>
     <div class="text-center mt-5">
-      <router-link to="/cart" class="btn btn-danger m-1"><i class="fa fa-chevron-left"></i> Back</router-link>
-      <button class="btn btn-success m-1" v-on:click="submitOrder"><i class="fa fa-check-circle"></i> Place Order</button>
+      <router-link to="/cart" class="btn btn-danger m-1"><i class="fa fa-chevron-left"></i><b class="text-title-icon">Back</b></router-link>
+      <button class="btn btn-success m-1" v-on:click="submitOrder"><i class="fa fa-check-circle"></i><b class="text-title-icon">Place Order</b></button>
     </div>
   </div>
 </template>
