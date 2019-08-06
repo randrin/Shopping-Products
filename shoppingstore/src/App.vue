@@ -31,4 +31,7 @@
     color: #2c3e50;
     margin-top: 60px;
   }
+  .text-title-icon {
+    padding-left: 5px;
+  }
 </style>

@@ -14,7 +14,7 @@
     <td class="text-right">{{ line.product.price | currency }}</td>
     <td class="text-right">{{ (line.quantity * line.product.price) | currency }}</td>
     <td class="text-center">
-      <button class="btn btn-sm btn-danger" v-on:click="sendRemoveEvent"><i class="fa fa-remove"></i> Remove</button>
+      <button class="btn btn-sm btn-danger" v-on:click="sendRemoveEvent"><i class="fa fa-remove"></i><b class="text-title-icon">Remove</b></button>
     </td>
   </tr>
 </template>

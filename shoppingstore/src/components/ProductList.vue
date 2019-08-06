@@ -16,9 +16,8 @@
       <div class="card-text p-1">
         <button
           class="btn btn-success btn-sm float-right"
-          v-on:click="handleProductAdd(p)"
-        >
-          <i class="fa fa-cart-arrow-down"></i> Add To Cart
+          v-on:click="handleProductAdd(p)">
+          <i class="fa fa-cart-arrow-down"></i><span class="text-title-icon">Add To Cart</span>
         </button>
       </div>
     </div>
