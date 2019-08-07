@@ -9,6 +9,7 @@ import Administration from "../components/admin/Administration";
 import Authentication from "../components/admin/Authentication";
 import AdminProducts from "../components/admin/AdminProducts";
 import AdminOrders from "../components/admin/AdminOrders";
+import ActionsProducts from "../components/admin/ActionsProducts";
 import dataStore from "../store";
 
 Vue.use(VueRouter);
@@ -28,8 +29,9 @@ export default new VueRouter({
                 }
             },
             children: [
-                { path: "/admin/products", component: AdminProducts },
-                { path: "/admin/orders", component: AdminOrders },
+                { path: "products/:op(create|edit)/:id(\\d+)?", component: ActionsProducts },
+                { path: "products", component: AdminProducts },
+                { path: "orders", component: AdminOrders },
                 { path: "", redirect: "/admin/products"}
             ]
         },
